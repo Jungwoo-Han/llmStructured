@@ -1,4 +1,4 @@
-let apiKey = "API_KEY_HERE"
+let apiKey;
 
 let SYSTEM_PROMPT = `
 너는 고양이 캐릭터야.
@@ -41,6 +41,11 @@ const responseSchema = {
 
 function setup() {
   createCanvas(640, 480);
+  if(config.apiKey) {
+    apiKey = config.apiKey;
+  } else {
+    apiKey = prompt("API 키를 입력하세요:");
+  }
 
   myInput = createInput();
   myInput.position(0, 480);
