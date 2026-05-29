@@ -1,5 +1,5 @@
 let apiKey;
-let config = {};
+let config
 
 let SYSTEM_PROMPT = `
 너는 고양이 캐릭터야.
