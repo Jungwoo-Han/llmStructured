@@ -41,7 +41,7 @@ const responseSchema = {
 
 function setup() {
   createCanvas(640, 480);
-  if(config.apiKey) {
+  if(config && config.apiKey) {
     apiKey = config.apiKey;
   } else {
     apiKey = prompt("API 키를 입력하세요:");
